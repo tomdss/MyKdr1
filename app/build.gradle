@@ -68,5 +68,8 @@ dependencies {
     // picasso
     implementation 'com.squareup.picasso:picasso:2.8'
 
+    // loading spinkit
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+
 
 }

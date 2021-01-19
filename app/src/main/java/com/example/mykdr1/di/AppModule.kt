@@ -2,6 +2,7 @@ package com.example.mykdr1.di
 
 import com.example.mykdr1.ImageLoader
 import com.example.mykdr1.model.User
+import com.example.mykdr1.network.MovieService
 import com.example.mykdr1.network.UserService
 import dagger.Module
 import dagger.Provides
@@ -12,6 +13,9 @@ import javax.inject.Singleton
 class AppModule {
     @Provides
     fun provideUserApi() = UserService.create()
+
+    @Provides
+    fun provideMovieApi() = MovieService.create()
 
     @Provides
     fun provideLoadImage() = ImageLoader()

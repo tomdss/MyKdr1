@@ -1,14 +1,12 @@
 package com.example.mykdr1
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.ImageView
-import android.widget.ProgressBar
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import com.example.mykdr1.model.User
 import com.example.mykdr1.model.UserResponse
 import com.example.mykdr1.network.UserApi
@@ -94,6 +92,11 @@ class MainActivity : DaggerAppCompatActivity() {
                     tvText.text = "onFailure : ${it.message}"
                 }
             )
+
+        findViewById<Button>(R.id.btnNext).setOnClickListener {
+            val intent = Intent(this, MovieActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun initViews() {
